@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html> 
+    <head> 
+        <link href="../static/css/Layout.css" th:href="@{/css/Layout.css}" rel="stylesheet" />
+    </head>
+    <body>
+
+        <div>
+            <tr th:each="report : ${tickets}">
+            <div id="issue">
+                <td><p>Username: </p><span th:text="${report.User}"></span></td>
+                <br></br>
+                <td><span th:text="${report.issue}"> </span></td>
+                <br></br>
+            </div>
+            <br></br> <br></br>
+
+        </tr>
+
+    </div>
+
+</body>
+</html>     

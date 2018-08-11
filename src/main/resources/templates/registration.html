@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+         <link href="../static/css/Layout.css" th:href="@{/css/Layout.css}" rel="stylesheet" />
+    </head>
+<body>
+<h1>Add new user</h1>
+    <form th:action="@{/add}" method="post">
+            <div><label> User Name : <input type="text" name="username"/> </label></div>
+            <div><label> Password: <input type="password" name="password"/> </label></div>
+            <div><input type="submit" value="Add user"/></div>
+        </form>
+
+<form  action="/home">
+    <button type="submit">Home</button>
+</form>
+</body>
+</html>

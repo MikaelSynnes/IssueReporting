@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <title>Spring Security Example</title>
+   <link href="../static/css/Layout.css" th:href="@{/css/Layout.css}" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Welcome!</h1>
+        <form action="/createticket">
+            <button>Submit new Ticket</button>
+        </form>
+        <form action="/tickets">
+            <button >Check tickets (HR Only)</button>
+        </form>
+         <form action="/registration">
+            <button >Create new users (HR Only)</button>
+        </form>
+        
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+    </body>
+</html>
