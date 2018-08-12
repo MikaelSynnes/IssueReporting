@@ -59,7 +59,7 @@ public class API {
         UserDetails user=  User.withDefaultPasswordEncoder().username(username).password(password).roles("USER").build();
         inMemoryUserDetailsManager.createUser(user);
       
-        return "added";
+        return new RedirectView("/");
     }
 
     

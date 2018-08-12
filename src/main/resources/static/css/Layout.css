@@ -21,7 +21,15 @@ body{
 
 input{
     padding:5px;
+    margin:10px;
     display:block;
+}
+submit{
+       padding:5px;
+}
+button{
+    padding:5px;
+     margin:10px;
 }
 
 p{

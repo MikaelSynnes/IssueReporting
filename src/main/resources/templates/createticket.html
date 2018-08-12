@@ -13,9 +13,14 @@ and open the template in the editor.
     </head>
     <body>
         <form th:action="@{/createticket/addticket}" method="post">
-            <div><label> Name(Optional) : <input type="text" value="anonymous" name="user"/> </label></div>
+            <div><label> Name (Optional) : <input type="text" value="anonymous" name="user"/> </label></div>
             <div id="ticket"><label> Explain the situation: <input type="text" name="text"/> </label></div>
-            <div><input type="submit" value="Sign In"/></div>
+            <div><input type="submit" value="Create ticket"/></div>
         </form>
+        
+        
+        <form  action="/">
+    <button type="submit">Home</button>
+</form>
     </body>
 </html>
