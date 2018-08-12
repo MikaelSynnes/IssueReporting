@@ -14,6 +14,7 @@ body{
     padding-right:20%;
 }
 
+
 #ticket input{
     min-width:400px;
   min-height:200px;;
@@ -21,15 +22,15 @@ body{
 
 input{
     padding:5px;
-    margin:10px;
+    margin:5px;
     display:block;
 }
 submit{
-       padding:5px;
+       padding:10px;
 }
 button{
     padding:5px;
-     margin:10px;
+     margin:5px;
 }
 
 p{
@@ -39,4 +40,6 @@ p{
     
     border:5px solid black;
     display:block;
+     margin:10px;
+    padding:10px;
 }

@@ -100,8 +100,8 @@ public ModelAndView adminPage() {
    
     private ArrayList<Report> createDummyTickets() {
         ArrayList<Report> reports = new ArrayList();
-        reports.add(new Report("This is a dummy issue", ""));
-        reports.add(new Report("This is a dummy issue 2", ""));
+        reports.add(new Report("This is a dummy issue", "Anonymous"));
+        reports.add(new Report("This is a dummy issue 2", "Anonymous"));
         reports.add(new Report("This is a dummy issue 3", "I chose to show name"));
         reports.add(new Report("The ticket system is trash", "Mikael"));
 

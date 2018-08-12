@@ -13,12 +13,12 @@ and open the template in the editor.
         <div>
             <tr th:each="report : ${tickets}">
             <div id="issue">
-                <td><p>Username: </p><span th:text="${report.User}"></span></td>
+                <td><p>Username:  </p><span th:text="${report.User}"></span></td>
                 <br></br>
                 <td><span th:text="${report.issue}"> </span></td>
                 <br></br>
             </div>
-            <br></br> <br></br>
+            
 
         </tr>
         <form  action="/">
