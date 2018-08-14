@@ -32,6 +32,9 @@ button{
     padding:5px;
      margin:5px;
 }
+#back{
+    float:left;
+}
 
 p{
    display:inline-block;

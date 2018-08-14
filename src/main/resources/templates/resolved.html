@@ -11,22 +11,21 @@ and open the template in the editor.
     <body>
 
         <div>
-            <tr th:each="report : ${tickets}">
+            <tr th:each="report : ${resolved}">
             <div id="issue">
 
                 <td><p>Username:  </p><span th:text="${report.User}"></span></td>
                 <br></br>
                 <td><span th:text="${report.issue}"> </span></td>
 
-                <a th:href="@{/tickets/remove{id}(id=${report.id})}"><span>Resolve</span></a>
+               
                 <br></br>
             </div>
 
 
         </tr>
-        
-        <form  action="/resolved">
-            <button type="submit">Check resolved suggestions/tickets</button>
+         <form  id="back" action="/tickets">
+            <button type="submit">Back</button>
         </form>
         <form  action="/">
             <button type="submit">Home</button>

@@ -12,10 +12,12 @@ package Data;
 public class Report {
     String issue;
     String User;
+    String id;
 
-    public Report(String issue, String User) {
+    public Report(String issue, String  User, String id) {
         this.issue = issue;
         this.User = User;
+        this.id=id;
     }
 
     public String getIssue() {
@@ -32,6 +34,14 @@ public class Report {
 
     public void setUser(String User) {
         this.User = User;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
     
 }

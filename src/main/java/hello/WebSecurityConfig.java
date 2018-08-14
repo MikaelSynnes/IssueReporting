@@ -32,6 +32,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/", "/home").hasAnyRole("USER","HR")
                 .antMatchers("/createticket").hasAnyRole("USER","HR")
                 .antMatchers("/tickets").hasRole("HR")
+                 .antMatchers("/resolved").hasRole("HR")
                 .antMatchers("/registration").hasRole("HR")
                 .and()
                 .formLogin()
@@ -49,7 +50,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
   
     @Bean
-    
     public InMemoryUserDetailsManager inMemoryUserDetailsManager() {
 
         UserDetails user
