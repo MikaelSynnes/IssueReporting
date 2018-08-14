@@ -39,12 +39,16 @@ public class API {
 
     @RequestMapping("/add")
     public RedirectView add(@RequestParam("username") String username, @RequestParam("password") String password) {
+        try{
         UserDetails user = User.withDefaultPasswordEncoder().username(username).password(password).roles("USER").build();
         inMemoryUserDetailsManager.createUser(user);
 
         return new RedirectView("/");
+        }catch(Exception e){
+            return new RedirectView("/registration");
+        }
     }
-
+    
     @RequestMapping("tickets/remove{id}")
     public RedirectView remove(@PathVariable String id) {
         Report ti = null;

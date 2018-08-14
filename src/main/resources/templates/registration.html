@@ -9,11 +9,15 @@ and open the template in the editor.
          <link href="../static/css/Layout.css" th:href="@{/css/Layout.css}" rel="stylesheet" />
     </head>
 <body>
-<h1>Create new user</h1>
+      <header><h1>Perfect Workplace</h1></header>
+<h2>Create new user</h2>
+   <div th:if="${param.error}">
+            Please enter a unique username and a password.
+        </div>
     <form th:action="@{/add}" method="post">
-            <div><label> User Name : <input type="text" name="username"/> </label></div>
+            <div><label> Username : <input type="text" name="username"/> </label></div>
             <div><label> Password: <input type="password" name="password"/> </label></div>
-            <div><input type="submit" value="Add user"/></div>
+            <div><button>Add user</button></div>
         </form>
 
 <form  action="/">

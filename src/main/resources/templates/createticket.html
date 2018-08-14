@@ -11,7 +11,9 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <link href="../static/css/Layout.css" th:href="@{/css/Layout.css}" rel="stylesheet" />
     </head>
+      
     <body>
+        <header><h1>Perfect Workplace</h1></header>
         <form th:action="@{/createticket/addticket}" method="post">
             <div><label> Name (Optional) : <input type="text" value="anonymous" name="user"/> </label></div>
             <div id="ticket"><label> Explain the suggestion: <input type="text" name="text"/> </label></div>
@@ -20,7 +22,7 @@ and open the template in the editor.
         
         
         <form  action="/">
-    <button type="submit">Home</button>
+    <button>Home</button>
 </form>
     </body>
 </html>

@@ -9,7 +9,6 @@ package hello;
  *
  * @author Mikael
  */
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -24,15 +23,15 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
-   
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/", "/home").hasAnyRole("USER","HR")
-                .antMatchers("/createticket").hasAnyRole("USER","HR")
+                .antMatchers("/", "/home").hasAnyRole("USER", "HR")
+                .antMatchers("/createticket").hasAnyRole("USER", "HR")
                 .antMatchers("/tickets").hasRole("HR")
-                 .antMatchers("/resolved").hasRole("HR")
+                .antMatchers("/resolved").hasRole("HR")
                 .antMatchers("/registration").hasRole("HR")
                 .and()
                 .formLogin()
@@ -40,27 +39,27 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 .and()
                 .logout()
-                .permitAll();
+                .permitAll()
+               ;
     }
-     @Override
+
+    @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(inMemoryUserDetailsManager());
     }
 
-
-  
     @Bean
     public InMemoryUserDetailsManager inMemoryUserDetailsManager() {
 
         UserDetails user
                 = User.withDefaultPasswordEncoder()
                 .username("HR")
-                .password("123")      
+                .password("123")
                 .roles("HR")
-                .build();   
+                .build();
 
-      return  new InMemoryUserDetailsManager(user);
-      
+        return new InMemoryUserDetailsManager(user);
+
     }
 
 }

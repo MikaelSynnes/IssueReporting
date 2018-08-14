@@ -5,7 +5,7 @@
    <link href="../static/css/Layout.css" th:href="@{/css/Layout.css}" rel="stylesheet" />
     </head>
     <body>
-        <h1>Welcome!</h1>
+       <header><h1>Perfect Workplace</h1></header>
         <form action="/createticket">
             <button>Submit new Suggestion</button>
         </form>
@@ -17,7 +17,7 @@
         </form>
         
         <form th:action="@{/logout}" method="post">
-            <input type="submit" value="Sign Out"/>
+            <button>Sign Out</button>
         </form>
     </body>
 </html>

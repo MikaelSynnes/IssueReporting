@@ -9,8 +9,9 @@ and open the template in the editor.
         <link href="../static/css/Layout.css" th:href="@{/css/Layout.css}" rel="stylesheet" />
     </head>
     <body>
-
+  <header><h1>Perfect Workplace</h1></header>
         <div>
+            <h2>Resolved Issues</h2>
             <tr th:each="report : ${resolved}">
             <div id="issue">
 
